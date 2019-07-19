@@ -77,7 +77,7 @@ You need to put this into `~/.cargo/config` first:
 [target.x86_64-pc-windows-msvc]
 linker = "/path/to/msvc-linker/linker-x64.sh"
 
-[target.i686-pc-windows-mssvc]
+[target.i686-pc-windows-msvc]
 linker = "/path/to/msvc-linker/linker-x86.sh"
 ```
 
