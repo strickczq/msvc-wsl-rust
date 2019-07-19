@@ -19,7 +19,7 @@ echo "\$env:LIB=\"$sdk_libs;$ucrt_libs;$crt_libs\"" > "$script_path/last-linking
 
 path_l2w()
 {
-        echo "\\\\\\wsl\$\\$wsl_distro$(echo "$1" | sed "s/\//\\\\/g")"
+        echo "\\\\wsl\$\\$wsl_distro$(echo "$1" | sed "s/\//\\\\/g")"
 }
 
 args=""
