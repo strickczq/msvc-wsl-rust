@@ -41,6 +41,9 @@ done
 
 log_file="$(path_l2w "$script_path/last-linking.log")"
 
-echo "& \"$linker_exec\" $args | Out-file \"$log_file\"" >> "$script_path/last-linking.ps1"
+commands_file="$(path_l2w "$script_path/last-linking-args.txt")"
+echo "$args" > "$script_path/last-linking-args.txt"
+
+echo "& \"$linker_exec\" \"@$commands_file\" | Out-file \"$log_file\"" >> "$script_path/last-linking.ps1"
 
 powershell.exe -Command "$script_path/last-linking.ps1"
