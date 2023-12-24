@@ -46,4 +46,6 @@ echo "$args" > "$script_path/last-linking-args.txt"
 
 echo "& \"$linker_exec\" \"@$commands_file\" | Out-file \"$log_file\"" >> "$script_path/last-linking.ps1"
 
-powershell.exe -Command "$script_path/last-linking.ps1"
+mkdir /mnt/c/temp
+cp $script_path/last-linking.ps1 /mnt/c/temp
+cmd.exe /c "cd C:\temp & powershell.exe -Command .\last-linking.ps1"
